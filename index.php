@@ -2,7 +2,7 @@
     require_once("modelos/cabecalho.php");
     require_once("objetos/participantes.php");
     require_once("objetos/turma.php");
-    verificaUsuario();
+    //verificaUsuario();
     if (isset($_POST["txtPesquisa"])) {
         $chave = $_POST["txtPesquisa"];
     } else {
