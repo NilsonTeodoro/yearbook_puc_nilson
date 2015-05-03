@@ -1,0 +1,3 @@
+body { margin: 0; padding: 0; }
+.footer { position: fixed; bottom: 0; width:100%; text-align: center; clear: both; }
+.fieldset { width: 400px; margin: 0 auto; }
