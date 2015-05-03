@@ -17,7 +17,7 @@
             <!--<a href="cadastro.php">Encerrar</a>-->
         </div>
         <br>
-        <form action="" method="post">
+        <!--<form action="" method="post">
             <input type="text" name="txtPesquisa" class="form-control" placeholder="informe o nome do participante">
             <br>
             <button type="submit" class="btn btn-primary">Pesquisar</button>
@@ -32,7 +32,7 @@
                 $participantes->addParticipante($participante);
             }
             $participantes->mostrar();
-        ?>
+        ?>-->
     </section>
 <?php
     require_once("modelos/rodape.php");
