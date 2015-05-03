@@ -107,12 +107,13 @@
 on cidades.idEstado = estados.idEstado where participantes.login = ?");
                 $pesquisar = $obj->execute(array($login));
                 $lista = $obj->fetchAll();
+				$_conecta->desconectar();
                 return $lista;   
             } catch(Exception $e) {
             
-            } finally {
+            } /*finally {
                 $_conecta->desconectar();
-            }
+            }*/
         }
         
         function listaAlunos($chave) {
@@ -122,12 +123,13 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
                 $obj = $conn->prepare("select nomeCompleto, login, arquivoFoto from participantes where nomeCompleto like ?");
                 $pesquisar = $obj->execute(array('%'.$chave.'%'));
                 $lista = $obj->fetchAll();
+				$_conecta->desconectar();
                 return $lista;   
             } catch(Exception $e) {
             
-            } finally {
+            } /*finally {
                 $_conecta->desconectar();
-            }
+            }*/
         }
         
         function mostraPerfil(){
@@ -190,6 +192,10 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
                                     $participante->getSenha()));
                 //Descomentar para descobrir erros
                 //echo $conn->lastInsertId() or die(print_r($obj->errorInfo(), true));
+				$_conecta->desconectar();
+                $obj = null;
+                $conn = null;
+                $_conecta->desconectar();
                 return 1;
             }
             catch(Exception $e)
@@ -197,13 +203,13 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
                 echo $e->getMessage();
                 return 0;
             }
-            finally
+            /*finally
             {
                 $_conecta->desconectar();
                 $obj = null;
                 $conn = null;
                 $_conecta->desconectar();
-            }
+            }*/
         }
         
         function updParticipante($participante)
@@ -223,6 +229,10 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
                                     $participante->getLogin()));
                 //Descomentar para descobrir erros
                 //echo $conn->lastInsertId() or die(print_r($obj->errorInfo(), true));
+				$_conecta->desconectar();
+                $obj = null;
+                $conn = null;
+                $_conecta->desconectar();
                 return 1;
             }
             catch(Exception $e)
@@ -230,13 +240,13 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
                 echo $e->getMessage();
                 return 0;
             }
-            finally
+            /*finally
             {
                 $_conecta->desconectar();
                 $obj = null;
                 $conn = null;
                 $_conecta->desconectar();
-            }
+            }*/
         }
 	}
 ?>
