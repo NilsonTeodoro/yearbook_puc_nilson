@@ -1,6 +1,3 @@
-<?php
-    //require_once("negocio/libYearbook.php");
-?>
 <!DOCTYPE html>
 <html lang="br">
     <head>
