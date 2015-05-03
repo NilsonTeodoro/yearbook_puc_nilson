@@ -1,6 +1,6 @@
 <?php
     require_once("modelos/cabecalho.php");
-	//include_once("objetos/participantes.php");
+	include_once("objetos/participantes.php");
 	
 	/*$participante = new participantes("",
                                       "",
