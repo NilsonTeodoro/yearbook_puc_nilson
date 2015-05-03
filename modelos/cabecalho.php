@@ -19,14 +19,6 @@
     <body>
         <header class="navbar navbar-static-top navbar-inverse" role="banner">
             <section class="container">
-                <!--<?php if (usuarioLogado() <> "") { ?>
-                    <h1><a href="index.php" class="navbar-brand">Yeabook</a></h1>
-                <?php } else { ?>
-                    <h1><a href="acesso.php" class="navbar-brand">Yeabook</a></h1>
-                <?php } ?>
-                <?php if (usuarioLogado() <> "") { ?>
-                    <p class="navbar-brand">Bem vindo <?= usuarioLogado() ?>, <a href="negocio/logout.php">sair</a></p>
-                <?php } ?>-->
             </section>
         </header>
         
