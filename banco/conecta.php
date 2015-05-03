@@ -3,11 +3,11 @@
 	{
 		//Propriedades da classe
 		private static $db_sgbd 	= "mysql";
-		private static $db_maquina 	= "localhost";
+		private static $db_maquina 	= "br-cdbr-azure-south-a.cloudapp.net";
 		private static $db_porta 	= "3306";
-		private static $db_usuario 	= "daw";
-		private static $db_senha 	= "daw2014";
-		private static $db_banco 	= "daw_yearbook";
+		private static $db_usuario 	= "b7e1e5ada2438f";
+		private static $db_senha 	= "8062e7e9";
+		private static $db_banco 	= "yearbooknilsondb";
 		private $conexao;
 		
 		//Método construtor
