@@ -1,5 +1,5 @@
 <?php
-    include_once("conecta.php");
+    include_once("banco/conecta.php");
 
 	class participantes
 	{
