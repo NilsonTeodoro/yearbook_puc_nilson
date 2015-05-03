@@ -2,15 +2,15 @@
     require_once("modelos/cabecalho.php");
 	include_once("objetos/participantes.php");
 	
-	$participante = new participantes("",
+	/*$participante = new participantes("",
                                       "",
                                       "",
                                       "",
                                       "",
                                       "",
                                       "");
-	$perfil = participante->listaPerfil("nilsonkz");
-	print_r($perfil);
+	$perfil = $participante->listaPerfil("nilsonkz");
+	print_r($perfil);*/
 ?>
     <section class="container">
         <h3>Nilson Aparecido Teodoro - Analista de Sistemas</h3>
