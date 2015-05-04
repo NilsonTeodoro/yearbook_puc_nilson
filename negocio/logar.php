@@ -3,9 +3,6 @@
 	
 	session_start();
 	
-	echo "logar?";
-	
-	/*
 	try {
 		echo "nilson";
 		if (isset($_POST["lembrar"])) {
@@ -37,5 +34,5 @@
 		die();
 	} catch(Exception $e) {
         echo "erro - ".$e;
-    }*/
+    }
 ?>
