@@ -159,16 +159,27 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
         }
         
         function logar($participante){
-            $_conecta = new conecta();
-            $conn = $_conecta->conectar();
-            $obj = $conn->prepare("select login, arquivoFoto from participantes where login = ? and senha = ?");
-            $pesquisar = $obj->execute(array($participante->getLogin(), $participante->getSenha()));
-            $dados = $obj->fetchAll();
-            $_conecta->desconectar();
-            if (count($dados) != 1) {
+			try
+            {
+				echo "método logar";
+				echo "getLogin: ".$participante->getLogin();
+				echo "getSenha: ".$participante->getSenha();
+				$_conecta = new conecta();
+				$conn = $_conecta->conectar();
+				$obj = $conn->prepare("select login, arquivoFoto from participantes where login = ? and senha = ?");
+				$pesquisar = $obj->execute(array($participante->getLogin(), $participante->getSenha()));
+				$dados = $obj->fetchAll();
+				$_conecta->desconectar();
+				if (count($dados) != 1) {
+					return 0;
+				} else {
+					return $dados;
+				}
+			}
+            catch(Exception $e)
+            {
+                echo $e->getMessage();
                 return 0;
-		    } else {
-                return $dados;
             }
         }
         
