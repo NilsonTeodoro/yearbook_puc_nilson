@@ -1,7 +1,8 @@
 <?php
-    require_once("../objetos/participantes.php");
+    require_once("objetos/participantes.php");
 	session_start();
 
+	echo "nilson";
     if (isset($_POST["lembrar"])) {
        $lembrar = $_POST["lembrar"];
        if($lembrar == "lmbUsuario")
