@@ -1,5 +1,6 @@
 <?php
-	require_once("objetos/participantes.php");
+	echo "logar?";
+	/*require_once("objetos/participantes.php");
 	session_start();
 	
 	try {
@@ -33,5 +34,5 @@
 		die();
 	} catch(Exception $e) {
         echo "erro - ".$e;
-    }
+    }*/
 ?>
