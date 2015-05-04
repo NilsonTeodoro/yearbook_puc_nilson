@@ -4,7 +4,7 @@
 	session_start();
 	
 	try {
-		echo "log 01";
+		echo "<br /> log 01";
 		if (isset($_POST["lembrar"])) {
 		   $lembrar = $_POST["lembrar"];
 		   if($lembrar == "lmbUsuario")
@@ -12,7 +12,7 @@
 			   setcookie("login", utf8_encode(htmlspecialchars($_POST["txtUsuario"])), mktime(0,0,0,12,31,2014));
 		   }
 		}
-		echo "log 02";
+		echo "<br /> log 02";
 		$participante = new participantes("",
 										  "",
 										  "",
@@ -21,7 +21,7 @@
 										  "",
 										  utf8_encode(md5(htmlspecialchars($_POST["txtSenha"]))));
 		$objeto = $participante->logar($participante);
-		echo "log 03";
+		echo "<br /> log 06";
 		if ($objeto <> 0){
 			foreach($objeto as $item) {
 				$_SESSION["foto"] = $item["arquivoFoto"];
