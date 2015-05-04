@@ -1,5 +1,5 @@
 <?php
-	require_once("objetos/participantes.php");
+	require_once("../objetos/participantes.php");
 	
 	echo "logar?";
 	
