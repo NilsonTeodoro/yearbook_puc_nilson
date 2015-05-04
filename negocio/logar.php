@@ -22,6 +22,7 @@
 										  utf8_encode(md5(htmlspecialchars($_POST["txtSenha"]))));
 		$objeto = $participante->logar($participante);
 		echo "<br /> log 06";
+		echo "objeto: ".$objeto;
 		if ($objeto <> 0){
 			foreach($objeto as $item) {
 				$_SESSION["foto"] = $item["arquivoFoto"];
