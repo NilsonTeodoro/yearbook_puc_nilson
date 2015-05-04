@@ -50,13 +50,13 @@
 			{
 				echo "<br />conexão: ".$this->getSgbd().':host='.$this->getMaquina().';port='.$this->getPorta().';dbname='.$this->getBanco(), $this->getUsuario(), $this->getSenha();
 				$this->conexao = new PDO($this->getSgbd().':host='.$this->getMaquina().';port='.$this->getPorta().';dbname='.$this->getBanco(), $this->getUsuario(), $this->getSenha());
-				die(print_r($obj->errorInfo(), true));
+				echo "<br />retorna conexão 01.";
 			}
 			catch(PDOException $e)
 			{
 				die(var_dump($e->getMessage()));
 			}
-			echo "<br />retorna conexão.";
+			echo "<br />retorna conexão 02.";
 			return $this->conexao;
 		}
 	}
