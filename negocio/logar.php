@@ -1,10 +1,11 @@
 <?php
 	require_once("../objetos/participantes.php");
 	
+	session_start();
+	
 	echo "logar?";
 	
-	/*session_start();
-	
+	/*
 	try {
 		echo "nilson";
 		if (isset($_POST["lembrar"])) {
