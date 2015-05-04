@@ -49,6 +49,7 @@
 			try
 			{
 				$this->conexao = new PDO($this->getSgbd().':host='.$this->getMaquina().';port='.$this->getPorta().';dbname='.$this->getBanco(), $this->getUsuario(), $this->getSenha());
+				die(print_r($obj->errorInfo(), true));
 			}
 			catch(PDOException $e)
 			{

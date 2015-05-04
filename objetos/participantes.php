@@ -178,6 +178,7 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
 					echo "$dados: ".$dados;
 					return $dados;
 				}
+				die(print_r($obj->errorInfo(), true));
 				$_conecta->desconectar();
 			}
             catch(Exception $e)
