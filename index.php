@@ -2,7 +2,8 @@
     require_once("modelos/cabecalho.php");
     require_once("objetos/participantes.php");
     require_once("objetos/turma.php");
-    verificaUsuario();
+    //função para verificar se o usuário está logado!
+	verificaUsuario();
     if (isset($_POST["txtPesquisa"])) {
         $chave = $_POST["txtPesquisa"];
     } else {
