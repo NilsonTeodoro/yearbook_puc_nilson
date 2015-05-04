@@ -161,9 +161,6 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
         function logar($participante){
 			try
             {
-				echo "método logar";
-				echo "getLogin: ".$participante->getLogin();
-				echo "getSenha: ".$participante->getSenha();
 				$_conecta = new conecta();
 				$conn = $_conecta->conectar();
 				$obj = $conn->prepare("select login, arquivoFoto from participantes where login = ? and senha = ?");
@@ -171,8 +168,10 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
 				$dados = $obj->fetchAll();
 				$_conecta->desconectar();
 				if (count($dados) != 1) {
+					echo "count($dados): ".count($dados);
 					return 0;
 				} else {
+					echo "$dados: ".$dados;
 					return $dados;
 				}
 			}
