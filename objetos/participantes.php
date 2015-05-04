@@ -111,9 +111,7 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
                 return $lista;   
             } catch(Exception $e) {
             
-            } /*finally {
-                $_conecta->desconectar();
-            }*/
+            }
         }
         
         function listaAlunos($chave) {
@@ -127,9 +125,7 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
                 return $lista;   
             } catch(Exception $e) {
             
-            } /*finally {
-                $_conecta->desconectar();
-            }*/
+            }
         }
         
         function mostraPerfil(){
@@ -203,13 +199,6 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
                 echo $e->getMessage();
                 return 0;
             }
-            /*finally
-            {
-                $_conecta->desconectar();
-                $obj = null;
-                $conn = null;
-                $_conecta->desconectar();
-            }*/
         }
         
         function updParticipante($participante)
@@ -240,13 +229,6 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
                 echo $e->getMessage();
                 return 0;
             }
-            /*finally
-            {
-                $_conecta->desconectar();
-                $obj = null;
-                $conn = null;
-                $_conecta->desconectar();
-            }*/
         }
 	}
 ?>
