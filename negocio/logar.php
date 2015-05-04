@@ -1,7 +1,9 @@
 <?php
+	require_once("objetos/participantes.php");
+	
 	echo "logar?";
-	/*require_once("objetos/participantes.php");
-	session_start();
+	
+	/*session_start();
 	
 	try {
 		echo "nilson";
