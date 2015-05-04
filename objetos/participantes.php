@@ -166,7 +166,6 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
 				$obj = $conn->prepare("select login, arquivoFoto from participantes where login = ? and senha = ?");
 				$pesquisar = $obj->execute(array($participante->getLogin(), $participante->getSenha()));
 				$dados = $obj->fetchAll();
-				$_conecta->desconectar();
 				if (count($dados) != 1) {
 					echo "count($dados): ".count($dados);
 					return 0;
@@ -174,6 +173,7 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
 					echo "$dados: ".$dados;
 					return $dados;
 				}
+				$_conecta->desconectar();
 			}
             catch(Exception $e)
             {
