@@ -178,8 +178,7 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
 			}
             catch(Exception $e)
             {
-                echo $e->getMessage();
-                return 0;
+                die(var_dump($e->getMessage()));
             }
         }
         
