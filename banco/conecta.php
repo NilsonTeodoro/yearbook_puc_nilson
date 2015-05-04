@@ -45,9 +45,10 @@
 		//Método para iniciar  e retornar a conexão
 		public function conectar()
 		{
-			echo "método conectar();";
+			echo "<br />método conectar();";
 			try
 			{
+				echo "<br />conexão: ".$this->getSgbd().':host='.$this->getMaquina().';port='.$this->getPorta().';dbname='.$this->getBanco(), $this->getUsuario(), $this->getSenha();
 				$this->conexao = new PDO($this->getSgbd().':host='.$this->getMaquina().';port='.$this->getPorta().';dbname='.$this->getBanco(), $this->getUsuario(), $this->getSenha());
 				die(print_r($obj->errorInfo(), true));
 			}
@@ -55,6 +56,7 @@
 			{
 				die(var_dump($e->getMessage()));
 			}
+			echo "<br />retorna conexão.";
 			return $this->conexao;
 		}
 	}
