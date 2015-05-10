@@ -216,6 +216,27 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
             }
         }
         
+        function updParticipanteFoto()
+        {
+            try
+            {
+                $_conecta = new conecta();
+                $conn = $_conecta->conectar();
+                $obj = $conn->prepare("update participantes set arquivoFoto = 'perfis/nilson.jpg'");
+                $obj->execute();
+                $_conecta->desconectar();
+                $obj = null;
+                $conn = null;
+                $_conecta->desconectar();
+                return 1;
+            }
+            catch(Exception $e)
+            {
+                echo $e->getMessage();
+                return 0;
+            }
+        }
+
         function updParticipante($participante)
         {
             try

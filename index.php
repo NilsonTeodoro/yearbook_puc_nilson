@@ -4,6 +4,7 @@
     require_once("objetos/turma.php");
     //função para verificar se o usuário está logado!
 	//verificaUsuario();
+
     if (isset($_POST["txtPesquisa"])) {
         $chave = $_POST["txtPesquisa"];
     } else {
