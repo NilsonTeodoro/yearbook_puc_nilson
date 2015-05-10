@@ -1,5 +1,5 @@
 <?php
-    include_once("../banco/conecta.php");
+    include_once("banco/conecta.php");
 
 	class participantes
 	{
@@ -118,7 +118,7 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
             try {
                 $_conecta = new conecta();
                 $conn = $_conecta->conectar();
-                $obj = $conn->prepare("select nomeCompleto, login, arquivoFoto from participantes where nomeCompleto like ?");
+                $obj = $conn->prepare("select nomeCompleto, login, arquivoFoto from participantes where 1 = 1 and nomeCompleto like ?");
                 $pesquisar = $obj->execute(array('%'.$chave.'%'));
                 $lista = $obj->fetchAll();
 				$_conecta->desconectar();
