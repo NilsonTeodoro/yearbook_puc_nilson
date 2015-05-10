@@ -5,7 +5,7 @@
 <html lang="br">
     <head>
         <meta charset="utf-8">
-        <title>Sistema de login</title>
+        <title>Yearbook - PUC 2015</title>
         <link href="css/bootstrap.css" rel="stylesheet">
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap-filestyle.js"> </script>
