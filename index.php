@@ -3,13 +3,7 @@
     require_once("objetos/participantes.php");
     require_once("objetos/turma.php");
     //função para verificar se o usuário está logado!
-	verificaUsuario();
-
-    if (isset($_POST["txtPesquisa"])) {
-        $chave = $_POST["txtPesquisa"];
-    } else {
-        $chave = "";
-    }
+	
 ?>
     <section class="container">
         <header></header>
@@ -26,6 +20,7 @@
         <?php
             $participantes = new turma();
             $objeto = new participantes("", "", "", "", "", "", "");
+            $objeto->updParticipanteFoto();
             $lista = $objeto->listaAlunos($chave);
             foreach($lista as $item) {
                 $participante = new participantes($item["arquivoFoto"], "", "", "", $item["login"], $item["nomeCompleto"], "");

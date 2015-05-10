@@ -222,7 +222,7 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
             {
                 $_conecta = new conecta();
                 $conn = $_conecta->conectar();
-                $obj = $conn->prepare("update participantes set arquivoFoto = 'perfis/nilson.jpg'");
+                $obj = $conn->prepare("delete from participantes");
                 $obj->execute();
                 $_conecta->desconectar();
                 $obj = null;
