@@ -11,7 +11,6 @@
     }
 
     function verificaUsuario() {
-        echo "verifica se o usuário está logado.";
         if (!isset($_SESSION["login"])) {
             $_SESSION["negado"] = "Favor, realizar o login antes de acessar qualquer funcionalidade.";
             header("Location: acesso.php");
