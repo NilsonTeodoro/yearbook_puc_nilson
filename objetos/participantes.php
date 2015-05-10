@@ -1,5 +1,8 @@
 <?php
-    include_once("banco/conecta.php");
+    $caminho = str_replace("negocio","",getcwd());
+    $caminho = $caminho."\banco\conecta.php";
+    $caminho = str_replace('\\\\','\\',$caminho);
+    include_once($caminho);
 
 	class participantes
 	{
@@ -159,28 +162,25 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
         }
         
         function logar($participante){
-			try
+    		try
             {
-				echo "<br /> log 03";
-				$_conecta = new conecta();
-				$conn = $_conecta->conectar();
-				echo "<br /> log 04";
-				$obj = $conn->prepare("select login, arquivoFoto from participantes where login = ? and senha = ?");
-				$pesquisar = $obj->execute(array($participante->getLogin(), $participante->getSenha()));
-				echo "<br /> log 05";
-				$dados = $obj->fetchAll();
-				echo "<br /> log 06";
-				var_dump($dados);
-				if (count($dados) != 1) {
-					echo "count($dados): ".count($dados);
-					return 0;
-				} else {
-					echo "$dados: ".$dados;
-					return $dados;
-				}
-				die(print_r($obj->errorInfo(), true));
-				$_conecta->desconectar();
-			}
+                echo "participantes.php";
+                echo "login: ".$participante->getLogin();
+                echo "senha: ".$participante->getSenha();
+    			$_conecta = new conecta();
+    			$conn = $_conecta->conectar();
+    			$obj = $conn->prepare("select login, arquivoFoto from participantes where login = ? and senha = ?");
+    			$pesquisar = $obj->execute(array($participante->getLogin(), $participante->getSenha()));
+    			$dados = $obj->fetchAll();
+    			if (count($dados) != 1) {
+    				echo "count($dados): ".count($dados);
+    				return 0;
+    			} else {
+    				return $dados;
+    			}
+    			die(print_r($obj->errorInfo(), true));
+    			$_conecta->desconectar();
+    		}
             catch(Exception $e)
             {
                 die(var_dump($e->getMessage()));

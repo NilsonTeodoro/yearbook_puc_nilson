@@ -1,7 +1,14 @@
 <?php
 	class conecta
 	{
-		//Propriedades da classe
+		private static $db_sgbd 	= "mysql";
+		private static $db_maquina 	= "localhost";
+		private static $db_porta 	= "3306";
+		private static $db_usuario 	= "root";
+		private static $db_senha 	= "";
+        private static $db_banco 	= "yearbook"; 
+
+		/*azure
 		private static $db_sgbd 	= "mysql";
 		private static $db_maquina 	= "br-cdbr-azure-south-a.cloudapp.net";
 		private static $db_porta 	= "3306";
@@ -9,6 +16,7 @@
 		private static $db_senha 	= "8062e7e9";
 		private static $db_banco 	= "yearbooknilsondb";
 		private $conexao;
+		*/
 		
 		//Método construtor
 		function __construct(){}
@@ -47,7 +55,7 @@
 		{
 			try
 			{
-				$this->conexao = new PDO($this->getSgbd().':host='.$this->getMaquina().';port='.$this->getPorta().';dbname='.$this->getBanco(), $this->getUsuario(), $this->getSenha());
+				$this->conexao = new PDO($this->getSgbd().':host='.$this->getMaquina().';port='.$this->getPorta().';dbname='.$this->getBanco().';charset=utf8', $this->getUsuario(), $this->getSenha());
 			}
 			catch(PDOException $e)
 			{

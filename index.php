@@ -3,7 +3,7 @@
     require_once("objetos/participantes.php");
     require_once("objetos/turma.php");
     //função para verificar se o usuário está logado!
-	//verificaUsuario();
+	verificaUsuario();
 
     if (isset($_POST["txtPesquisa"])) {
         $chave = $_POST["txtPesquisa"];
@@ -15,7 +15,6 @@
         <header></header>
         <div>
             <img src="<?= $_SESSION["foto"] ?>" class="thumbnail" width="140" height="140">
-            <a href="cadastro.php?operacao=2">Editar</a>
         </div>
         <br>
         <form action="" method="post">
