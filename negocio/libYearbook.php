@@ -63,8 +63,8 @@
 
     function retornaEstados()
     {
-        //$conexao = mysqli_connect("localhost", 'b7e1e5ada2438f', '8062e7e9', 'yearbooknilsondb');
-        $conexao = mysqli_connect("localhost", 'root', '', 'yearbook');
+        $conexao = mysqli_connect("localhost", 'b7e1e5ada2438f', '8062e7e9', 'yearbooknilsondb');
+        //$conexao = mysqli_connect("localhost", 'root', '', 'yearbook');
         $estados = array();
         $dados = mysqli_query($conexao, "SELECT 'Selecione' as sigla, 0 as idEstado union all SELECT sigaEstado as sigla, idEstado FROM estados");
         while($estado = mysqli_fetch_assoc($dados))

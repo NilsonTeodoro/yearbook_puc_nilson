@@ -1,14 +1,14 @@
 <?php
 	class conecta
 	{
-		/*local*/
+		/*local
 		private static $db_sgbd 	= "mysql";
 		private static $db_maquina 	= "localhost";
 		private static $db_porta 	= "3306";
 		private static $db_usuario 	= "root";
 		private static $db_senha 	= "";
         private static $db_banco 	= "yearbook"; 
-		
+		*/
 
 		/*azure
 		private static $db_sgbd 	= "mysql";
