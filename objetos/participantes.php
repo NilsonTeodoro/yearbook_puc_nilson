@@ -164,16 +164,12 @@ on cidades.idEstado = estados.idEstado where participantes.login = ?");
         function logar($participante){
     		try
             {
-                echo "participantes.php";
-                echo "login: ".$participante->getLogin();
-                echo "senha: ".$participante->getSenha();
     			$_conecta = new conecta();
     			$conn = $_conecta->conectar();
     			$obj = $conn->prepare("select login, arquivoFoto from participantes where login = ? and senha = ?");
     			$pesquisar = $obj->execute(array($participante->getLogin(), $participante->getSenha()));
     			$dados = $obj->fetchAll();
     			if (count($dados) != 1) {
-    				echo "count($dados): ".count($dados);
     				return 0;
     			} else {
     				return $dados;
