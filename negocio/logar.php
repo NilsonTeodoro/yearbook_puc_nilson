@@ -10,9 +10,6 @@
        }
     }
 
-    echo "nilson teodoro - logar.php";
-    echo "login: ".htmlspecialchars($_POST["txtUsuario"]);
-    echo "senha: ".htmlspecialchars($_POST["txtSenha"]);
     $participante = new participantes("",
                                       "",
                                       "",
