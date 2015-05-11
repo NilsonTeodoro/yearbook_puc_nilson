@@ -3,9 +3,7 @@
     require_once("modelos/cabecalho.php");
     require_once("objetos/participantes.php");
 
-    echo "Nilson";
     $estados = listarEstados();
-    var_dump($estados);
     if (isset($_GET["operacao"])) {
         $participante = new participantes("", "", "", "", "", "", "");
         $perfil = $participante->listaPerfil(htmlspecialchars($_SESSION["login"]));
