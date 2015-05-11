@@ -19,14 +19,22 @@
     <body>
         <header class="navbar navbar-static-top navbar-inverse" role="banner">
             <section class="container">
-                <?php if (usuarioLogado() <> "") { ?>
-                    <h1><a href="index.php" class="navbar-brand">Yeabook</a></h1>
-                <?php } else { ?>
-                    <h1><a href="acesso.php" class="navbar-brand">Yeabook</a></h1>
-                <?php } ?>
-                <?php if (usuarioLogado() <> "") { ?>
-                    <p class="navbar-brand">Bem vindo <?= usuarioLogado() ?>, <a href="negocio/logout.php">sair</a></p>
-                <?php } ?>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <?php if (usuarioLogado() <> "") { ?>
+                        <h1><a href="index.php" class="navbar-brand">Yeabook</a></h1>
+                        <?php } else { ?>
+                            <h1><a href="acesso.php" class="navbar-brand">Yeabook</a></h1>
+                        <?php } ?>
+                    </div>
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-4" style="margin-top: 25px; left: 89px;">
+                        <?php if (usuarioLogado() <> "") { ?>
+                            <span class="navbar-brand">Bem vindo <?= usuarioLogado() ?>, <a href="negocio/logout.php" style="color: white;">sair</a></span>
+                        <?php } ?>
+                    </div>
+                </div>
             </section>
         </header>
         

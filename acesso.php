@@ -17,7 +17,7 @@
             <div class="col-sm-4">
                 <div class="form-signin">
                     <fieldset>
-                        <legend>Área retrita</legend>
+                        <legend class="form-signin-heading"><h2>Área retrita</h2></legend>
                         <input type="text" name="txtUsuario" class="form-control" value="<?= $usuario ?>" placeholder="usuário">
                         <input type="password" name="txtSenha" class="form-control" placeholder="senha">
                         <label class="checkbox"><input type="checkbox" name="lembrar" value="lmbUsuario"> Lembrar</label>

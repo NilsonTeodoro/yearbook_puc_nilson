@@ -8,7 +8,7 @@
                                           utf8_encode(htmlspecialchars($_POST["txtEmail"])),
                                           utf8_encode(htmlspecialchars($_POST["txtUsuario"])),
                                           utf8_encode(htmlspecialchars($_POST["txtNome"])),
-                                          utf8_encode(md5(htmlspecialchars($_POST["txtSenha"]))));
+                                          utf8_encode(htmlspecialchars($_POST["txtSenha"])));
         if ($participante->addParticipante($participante) == 1){
             $_SESSION["sucesso"] = "Operação realizada com sucesso.";
             echo $_SESSION["sucesso"];
